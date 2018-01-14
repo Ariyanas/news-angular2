@@ -10,6 +10,7 @@ import { TechnologyComponent } from './technology/technology.component';
 import { BusinessComponent } from './business/business.component';
 
 export const routes: Routes = [
+  { path:'', component: HomeComponent, pathMatch: 'full' },
   { path: 'technology', component: TechnologyComponent },
   { path: 'business', component: BusinessComponent },
 ];
@@ -25,7 +26,8 @@ export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
